@@ -10,5 +10,9 @@ export default function requestOTP(req: any, res: any) {
   admin
     .auth()
     .getUser(phoneNumber)
-    .then(userRecord => {}); // find the particular user that has this phone number. async func
+    .then(userRecord => {})
+    .catch(err => {
+      res.send(422).send({error: err});
+      // res.send(422).send({error: "User not found"}); // for production
+    }); // find the particular user that has this phone number. async func
 }

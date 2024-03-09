@@ -12,6 +12,7 @@ import admin = require('firebase-admin');
 import createUser from './create_user';
 import serviceAccount = require('./service_account.json');
 import requestOTP from './request_otp';
+
 // Start writing functions
 // https://firebase.google.com/docs/functions/typescript
 
