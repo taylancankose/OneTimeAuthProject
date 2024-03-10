@@ -41,3 +41,16 @@
 ## Google Cloud Functions:
 
 ### _Access data in Firebase with custom logic_
+
+
+### Request 
+###     ↓
+### Find the user model
+###     ↓
+### Generate code
+###     ↓
+### Send text message → twilio api
+###     ↓                  |
+### Save code to user      ↓
+### Respond to request  ←---
+
