@@ -1,6 +1,6 @@
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-ignore
-import twilio from "twilio";
+import twilio from 'twilio';
 
 const accountSid = process.env.REACT_APP_TWILIO_ACCOUNT_SID;
 

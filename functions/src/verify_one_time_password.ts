@@ -8,10 +8,10 @@ export default function verifyPassword(req: any, res: any) {
 
   admin.auth().getUser(phoneNumber).then(() => {
     const ref = admin.database().ref("users/" + phoneNumber);
-    ref.on("value", (snapShot) => {
+    ref.on("value", (snapshot) => {
       ref.off();
-      const user = snapShot.val();
-      if (user.code !== code || !user.codeValide) res.status(422).send({error: "Code not valid"});
+      const user = snapshot.val();
+      if (user.code !== code || !user.codeValid) res.status(422).send({error: "Code not valid"});
       ref.update({codeValid: false});
       admin.auth().createCustomToken(phoneNumber).then((token) => res.send({token: token}));
     });
